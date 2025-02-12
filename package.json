@@ -1,0 +1,40 @@
+{
+  "name": "url-shortener-node",
+  "version": "1.0.0",
+  "description": "app for shorten any url",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinta3/url-shortener.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sinta3/url-shortener/issues"
+  },
+  "homepage": "https://github.com/sinta3/url-shortener#readme",
+  "keywords": [],
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.10.0",
+    "nodemon": "^3.1.9"
+  },
+  "_moduleAliases": {
+    "@controllers": "src/controllers",
+    "@utils": "src/utils",
+    "@routes": "src/routes",
+    "@models": "src/models",
+    "@configs": "src/configs",
+    "@middlewares": "src/middlewares",
+    "@services": "src/services"
+  }
+}
