@@ -1,0 +1,26 @@
+services:
+  url-shortener-app:
+    build: .
+    container_name: url-shortener-app
+    ports:
+      - "3000:3000"
+    env_file: ".env"
+    restart: always
+    networks:
+      - app-network
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - url-shortener-app
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
